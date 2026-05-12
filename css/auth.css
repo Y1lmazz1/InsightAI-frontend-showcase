@@ -1,0 +1,182 @@
+/* ─── Login Topbar ─── */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-h);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 100;
+    background: rgba(13, 17, 23, 0.72);
+    backdrop-filter: blur(14px);
+}
+
+/* ─── Glow ring behind octopus ─── */
+.glow-ring {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(ellipse at center bottom, rgba(99, 102, 241, 0.18) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 4;
+}
+
+/* ─── Octopus mascot ─── */
+.octopus-wrap {
+    position: fixed;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(700px, 100vw);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.octopus-wrap img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 -20px 80px rgba(99, 102, 241, 0.25));
+    animation: floatOct 6s ease-in-out infinite;
+}
+
+@keyframes floatOct {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-18px); }
+}
+
+/* ─── Main page layout ─── */
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 100px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Headline */
+.headline {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.1;
+}
+
+/* Login bar wrapper */
+.login-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: min(520px, 90vw);
+    position: relative;
+    z-index: 20;
+}
+
+/* Combined pill input bar */
+.main-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    padding: 6px 8px 6px 28px;
+    backdrop-filter: blur(20px);
+    transition: border-color 0.25s, background 0.25s;
+}
+
+.main-bar:focus-within {
+    border-color: rgba(99, 102, 241, 0.45);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Field group inside bar */
+.field-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 2px;
+    padding: 8px 0;
+}
+
+.field-group + .field-group {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 20px;
+    margin-left: 8px;
+}
+
+.field-group .flabel {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.03em;
+}
+
+.field-group input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+.field-group input::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+/* Submit button */
+.login-btn {
+    background: #6366f1;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.login-btn:hover {
+    background: #4f46e5;
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+}
+
+.login-btn:active {
+    transform: scale(0.98);
+}
+
+/* Helper links */
+.helpers {
+    display: flex;
+    gap: 20px;
+    margin-top: 4px;
+}
+
+.helpers a {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.35);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.helpers a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightAI | Geçmiş Analizler</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- ─── Navbar ─── -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">
+                <div class="logo-dot"></div>
+                InsightAI
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="index.html" class="nav-btn history-link">Yeni Analiz</a>
+            <button class="nav-btn logout-btn" onclick="window.location='login.html'">Çıkış Yap</button>
+        </div>
+    </nav>
+
+    <!-- ─── Page ─── -->
+    <div class="wrapper" style="padding-inline: 40px;">
+        <section class="history-section">
+
+            <!-- Başlık -->
+            <div class="history-header">
+                <div class="octopus-mini-wrapper">
+                    <img src="assets/octopus2.png" class="octopus-mini-icon" alt="Ahtapot">
+                </div>
+                <h1>Geçmiş Analizlerin</h1>
+                <p>Daha önce derinlemesine incelediğin ürünler ve yapay zekâ raporları.</p>
+            </div>
+
+            <!-- Kart Grid -->
+            <div class="history-grid" id="history-list">
+
+                <div class="history-card border-blue">
+                    <div class="card-top">
+                        <span class="date">12 Mayıs 2026</span>
+                        <span class="platform-tag">Amazon</span>
+                    </div>
+                    <h3 class="product-title">Logitech G Pro X Superlight 2 Dex</h3>
+                    <div class="card-footer">
+                        <div class="mini-stats">
+                            <span>⭐ 4.9</span>
+                            <span>💬 120+ Yorum</span>
+                        </div>
+                        <a href="#" class="view-report-btn">Raporu Aç</a>
+                    </div>
+                </div>
+
+                <div class="history-card border-purple">
+                    <div class="card-top">
+                        <span class="date">10 Mayıs 2026</span>
+                        <span class="platform-tag">Hepsiburada</span>
+                    </div>
+                    <h3 class="product-title">iPhone 15 Pro Max 256GB Naturel Titanyum</h3>
+                    <div class="card-footer">
+                        <div class="mini-stats">
+                            <span>⭐ 4.7</span>
+                            <span>💬 850+ Yorum</span>
+                        </div>
+                        <a href="#" class="view-report-btn">Raporu Aç</a>
+                    </div>
+                </div>
+
+                <div class="history-card border-green">
+                    <div class="card-top">
+                        <span class="date">08 Mayıs 2026</span>
+                        <span class="platform-tag">Trendyol</span>
+                    </div>
+                    <h3 class="product-title">Xiaomi Air Fryer 6L Akıllı Fritöz</h3>
+                    <div class="card-footer">
+                        <div class="mini-stats">
+                            <span>⭐ 4.5</span>
+                            <span>💬 2.4k Yorum</span>
+                        </div>
+                        <a href="#" class="view-report-btn">Raporu Aç</a>
+                    </div>
+                </div>
+
+                <div class="history-card border-gold">
+                    <div class="card-top">
+                        <span class="date">05 Mayıs 2026</span>
+                        <span class="platform-tag">Trendyol</span>
+                    </div>
+                    <h3 class="product-title">Sony WH-1000XM5 Kablosuz Kulaklık</h3>
+                    <div class="card-footer">
+                        <div class="mini-stats">
+                            <span>⭐ 4.8</span>
+                            <span>💬 430+ Yorum</span>
+                        </div>
+                        <a href="#" class="view-report-btn">Raporu Aç</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* ─── Octopus Float ─── */
+@keyframes floatingOcto {
+    0%, 100% { transform: translate(-50%, -50%); }
+    50%       { transform: translate(-50%, -54%); }
+}
+
+.octopus-bg {
+    animation: floatingOcto 6s ease-in-out infinite;
+}
+
+/* ─── Card Reveal ─── */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.dashboard.visible .card,
+.dashboard.visible .ai-sidebar {
+    animation: fadeUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.dashboard.visible .card:nth-child(1) { animation-delay: 0.05s; }
+.dashboard.visible .card:nth-child(2) { animation-delay: 0.12s; }
+.dashboard.visible .card:nth-child(3) { animation-delay: 0.19s; }
+.dashboard.visible .ai-sidebar        { animation-delay: 0.08s; }
+
+/* ─── Skeleton Loader ─── */
+@keyframes shimmer {
+    0%   { background-position: -400px 0; }
+    100% { background-position:  400px 0; }
+}
+
+.skeleton {
+    border-radius: 8px;
+    height: 14px;
+    margin-bottom: 10px;
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,0.04) 25%,
+        rgba(255,255,255,0.09) 50%,
+        rgba(255,255,255,0.04) 75%
+    );
+    background-size: 800px 100%;
+    animation: shimmer 1.4s infinite linear;
+}
+
+.skeleton.short { width: 55%; }
+.skeleton.long  { width: 88%; }
+.skeleton.full  { width: 100%; }
+
+/* ─── Pulse dot (loading indicator) ─── */
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.4; transform: scale(0.85); }
+}
+
+.pulse-dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 1.2s ease-in-out infinite;
+}

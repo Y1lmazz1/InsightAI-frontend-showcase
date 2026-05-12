@@ -1,0 +1,61 @@
+/* ─── Navbar ─── */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-h);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 100;
+    background: rgba(13, 17, 23, 0.72);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ─── Nav Buttons ─── */
+.nav-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.history-link {
+    color: rgba(255, 255, 255, 0.55);
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.history-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.logout-btn {
+    color: rgba(255, 255, 255, 0.55);
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.logout-btn:hover {
+    color: #ff6b6b;
+    border-color: rgba(255, 107, 107, 0.35);
+    background: rgba(255, 107, 107, 0.06);
+}

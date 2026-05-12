@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightAI | Evrensel Ürün Analizi</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- ─── Navbar ─── -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="login.html" class="logo">
+                <div class="logo-dot"></div>
+                InsightAI
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="history.html" class="nav-btn history-link">Geçmiş Aramalar</a>
+            <button class="nav-btn logout-btn" onclick="window.location='login.html'">Çıkış Yap</button>
+        </div>
+    </nav>
+
+    <!-- ─── Page Wrapper ─── -->
+    <div class="wrapper">
+
+        <!-- HERO: Ahtapot + Arama -->
+        <section class="hero-section" id="hero">
+            <h1>Hangi ürünü merak ediyorsun?</h1>
+
+            <div class="search-container">
+                <img src="assets/octopus2.png" class="octopus-bg" alt="Analiz Ahtapotu">
+
+                <div class="search-box">
+                    <input type="text" id="url-input" placeholder="Ürün linkini buraya bırak...">
+                    <button class="analyze-btn" onclick="startAnalysis()">Analiz Et</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- DASHBOARD -->
+        <div class="dashboard" id="dashboard">
+
+            <main class="results-area">
+                <div class="bento-grid">
+
+                    <!-- Ürün Özellikleri -->
+                    <div class="card spec-card border-blue">
+                        <i class="corner-icon">❓</i>
+                        <h3>Ürün Özellikleri</h3>
+                        <div class="content" id="specs-list">
+                            <p class="placeholder-text">Analiz bekleniyor...</p>
+                        </div>
+                    </div>
+
+                    <!-- Platform Skorları -->
+                    <div class="card score-card border-purple">
+                        <i class="corner-icon">⭐</i>
+                        <h3>Platform Skorları</h3>
+                        <div class="content" id="platform-grid"></div>
+                    </div>
+
+                    <!-- Yorum Analizi -->
+                    <div class="card word-card border-green">
+                        <i class="corner-icon">💬</i>
+                        <h3>Yorum Analizi</h3>
+                        <div class="content" id="word-tags"></div>
+                    </div>
+
+                </div>
+            </main>
+
+            <!-- AI Sidebar -->
+            <aside class="ai-sidebar border-gold">
+                <div class="sidebar-header">
+                    <i class="corner-icon" style="position:static;opacity:.65;font-style:normal;">✨</i>
+                    <h2>AI Analiz Raporu</h2>
+                </div>
+                <div class="content" id="ai-response">
+                    <p class="placeholder-text">Lütfen bir ürün linki girerek analizi başlatın.</p>
+                </div>
+
+                <div class="price-tracker-mini">
+                    <span id="current-price">₺0.00</span>
+                    <div class="price-status">Fiyat Takibi Aktif</div>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
